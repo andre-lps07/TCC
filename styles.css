@@ -1,20 +1,33 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    height: 100vh; /* Ocupa a tela toda */
-    background-color: rgb(43, 35, 35); /* Fundo suave */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ebf748;
     margin: 0;
-    font-family: Arial, sans-serif; /* Fonte moderna */
+    font-family: Didot, serif;
+    background-image: url("images.png");
+    background-repeat: repeat;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgb(0, 195, 255);
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .container {
-    background: rgb(55, 24, 157);
+    background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombreamento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin-top: 80px; /* Para não ficar colado no header */
 }
 
 h1 {
@@ -35,6 +48,24 @@ select {
 
 select:focus {
     outline: none;
-    border-color: #007bff; /* Cor azul ao selecionar */
+    border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000;
+    background: #00aaff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0088cc;
 }
