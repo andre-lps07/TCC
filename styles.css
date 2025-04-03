@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa a tela toda */
+    background-color: rgb(43, 35, 35); /* Fundo suave */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Fonte moderna */
+}
+
+.container {
+    background: rgb(55, 24, 157);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombreamento */
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff; /* Cor azul ao selecionar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
