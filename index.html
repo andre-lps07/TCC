@@ -13,12 +13,19 @@
 
     <div class="container">
         <h2>Escolha uma profissão</h2>
-        <select name="profissao" id="profissoes">
+        <select name="profissao" id="profissoes" onchange="redirecionarCadastro()">
+            <option value="" disabled selected>Selecione...</option>
             <option value="pedreiro">Pedreiro</option>
             <option value="eletricista">Eletricista</option>
             <option value="encanador">Encanador</option>
             <option value="carpinteiro">Carpinteiro</option>
         </select>
     </div>
+
+    <script>
+        function redirecionarCadastro() {
+            window.location.href = "cadastro.html";
+        }
+    </script>
 </body>
 </html>
