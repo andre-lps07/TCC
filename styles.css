@@ -1,147 +1,122 @@
-/* Reset básico */
+/* Reset básico - remove margens e paddings padrão e define box model */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove todas as margens */
+    padding: 0; /* Remove todos os paddings */
+    box-sizing: border-box; /* Faz padding e border serem incluídos na largura/altura */
 }
 
+/* Estilos do corpo do documento */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    padding-top: 70px; /* Espaço para o cabeçalho fixo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define fonte padrão */
+    background-color: #f5f5f5; /* Cor de fundo cinza claro */
+    padding-top: 70px; /* Espaço para o cabeçalho fixo não cobrir conteúdo */
 }
 
-/* Cabeçalho */
+/* Estilos do cabeçalho */
 .cabecalho {
-    background: linear-gradient(135deg, #00aaff, #0066cc);
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    height: 70px; /* Altura fixa para alinhamento */
+    background: linear-gradient(135deg, #00aaff, #0066cc); /* Gradiente azul */
+    color: white; /* Cor do texto */
+    padding: 16px 32px; /* Espaçamento interno (16px top/bottom, 32px left/right) */
+    display: flex; /* Ativa flexbox */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Centraliza verticalmente */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%; /* Largura total */
+    top: 0; /* Alinha no topo da viewport */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    height: 70px; /* Altura fixa */
 }
 
-/* Logo */
+/* Estilos da logo */
 .logo {
-    flex: 1;
-    min-width: 200px;
+    flex: 1; /* Cresce para preencher espaço disponível */
+    min-width: 200px; /* Largura mínima */
 }
 
+/* Estilos do texto da logo */
 .logo h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte (semi-bold) */
+    line-height: 28px; /* Espaçamento entre linhas */
 }
 
-/* Navegação principal */
+/* Container da navegação principal */
 .navegacao {
-    display: flex;
-    justify-content: center;
-    flex: 2;
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex: 2; /* Ocupa 2x mais espaço que a logo */
 }
 
+/* Lista do menu */
 .lista-menu {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-    align-items: center;
+    display: flex; /* Disposição em linha */
+    list-style: none; /* Remove marcadores de lista */
+    gap: 16px; /* Espaço entre itens */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove paddings */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Itens do menu */
 .lista-menu li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    line-height: 1.5;
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: 500; /* Peso da fonte (medium) */
+    padding: 8px 16px; /* Espaçamento interno */
+    border-radius: 4px; /* Cantos arredondados */
+    transition: all 300ms ease; /* Transição suave para hover */
+    display: inline-block; /* Permite padding e transform */
+    line-height: 24px; /* Espaçamento entre linhas */
 }
 
+/* Efeito hover nos itens do menu */
 .lista-menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo branco semi-transparente */
 }
 
-/* Área de login */
+/* Área de login/registro */
 .area-login {
-    display: flex;
-    gap: 1rem;
-    flex: 1;
-    justify-content: flex-end;
-    min-width: 200px;
+    display: flex; /* Disposição em linha */
+    gap: 16px; /* Espaço entre botões */
+    flex: 1; /* Cresce para preencher espaço */
+    justify-content: flex-end; /* Alinha à direita */
+    min-width: 200px; /* Largura mínima */
 }
 
+/* Estilos base dos botões */
 .botao-login, .botao-registro {
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    display: inline-block;
-    line-height: 1.5;
-    text-align: center;
+    padding: 8px 16px; /* Espaçamento interno */
+    border-radius: 4px; /* Cantos arredondados */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: 500; /* Peso da fonte */
+    transition: all 300ms ease; /* Transição suave */
+    white-space: nowrap; /* Evita quebra de texto */
+    display: inline-block; /* Permite dimensionamento */
+    line-height: 24px; /* Espaçamento entre linhas */
+    text-align: center; /* Centraliza texto */
 }
 
+/* Estilos específicos do botão de login */
 .botao-login {
-    color: white;
-    border: 1px solid white;
-    background: transparent;
+    color: white; /* Texto branco */
+    border: 1px solid white; /* Borda branca */
+    background: transparent; /* Fundo transparente */
 }
 
+/* Estilos específicos do botão de registro */
 .botao-registro {
-    color: #0066cc;
-    background: white;
-    border: 1px solid white;
+    color: #0066cc; /* Texto azul */
+    background: white; /* Fundo branco */
+    border: 1px solid white; /* Borda branca */
 }
 
+/* Efeito hover no botão de login */
 .botao-login:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1); /* Fundo branco muito transparente */
 }
 
+/* Efeito hover no botão de registro */
 .botao-registro:hover {
-    background: #f0f0f0;
-}
-
-/* Responsividade */
-@media (max-width: 992px) {
-    .cabecalho {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 0.5rem 1rem;
-    }
-    
-    .logo, .navegacao, .area-login {
-        flex: 1 1 100%;
-        justify-content: center;
-        margin: 0.5rem 0;
-    }
-    
-    .lista-menu {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .lista-menu {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .area-login {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .botao-login, .botao-registro {
-        width: 100%;
-    }
+    background: #f0f0f0; /* Fundo cinza muito claro */
 }
