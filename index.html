@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPlace de Serviços</title>
     <link rel="stylesheet" href="styles.css">
-    <title>TCC</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Introdução</h1>
-    </div>
-
-    <div class="container">
-        <h2>Escolha uma profissão</h2>
-        <select name="profissao" id="profissoes" onchange="redirecionarCadastro()">
-            <option value="" disabled selected>Selecione...</option>
-            <option value="pedreiro">Pedreiro</option>
-            <option value="eletricista">Eletricista</option>
-            <option value="encanador">Encanador</option>
-            <option value="carpinteiro">Carpinteiro</option>
-        </select>
-    </div>
-
-    <script>
-        function redirecionarCadastro() {
-            window.location.href = "cadastro.html";
-        }
-    </script>
+    <header class="cabecalho">
+        <div class="logo">
+            <h1>MarketPlace de Serviços</h1>
+        </div>
+        
+        <nav class="navegacao">
+            <ul class="lista-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="horarios.html">Horários</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        
+        <div class="area-login">
+            <a href="login.html" class="botao-login">Fazer Login</a>
+            <a href="registro.html" class="botao-registro">Registrar-se</a>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Conteúdo da página aqui -->
+    </main>
 </body>
 </html>
