@@ -1,65 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha conta - Registro</title>
-    <link rel="stylesheet" href="stylesregistro.css">
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura viewport para responsividade -->
+    <title>Minha conta - Registro</title> <!-- Título da página -->
+    <link rel="stylesheet" href="stylesregistro.css"> <!-- Vincula o arquivo CSS -->
 </head>
 <body>
+    <!-- Cabeçalho do site -->
     <header class="cabecalho">
+        <!-- Logo/Marca do site -->
         <div class="logo">
             <h1>MarketPlace de Serviços</h1>
         </div>
         
+        <!-- Menu de navegação principal -->
         <nav class="navegacao">
             <ul class="lista-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html">Home</a></li> <!-- Link para página inicial -->
+                <li><a href="sobre.html">Sobre</a></li> <!-- Link para página sobre -->
+                <li><a href="contato.html">Contato</a></li> <!-- Link para página de contato -->
             </ul>
         </nav>
         
+        <!-- Área de login/registro -->
         <div class="area-login">
-            <a href="login.html" class="botao-login">Fazer Login</a>
-            <a href="registro.html" class="botao-registro">Registrar-se</a>
+            <a href="login.html" class="botao-login">Fazer Login</a> <!-- Botão de login -->
+            <a href="registro.html" class="botao-registro">Registrar-se</a> <!-- Botão de registro -->
         </div>
     </header>
     
+    <!-- Container principal do formulário -->
     <div class="registro-container">
-        <h1>Registre-se</h1>
+        <h1>Registre-se</h1> <!-- Título do formulário -->
         
+        <!-- Formulário de registro -->
         <form action="#" method="post">
+            <!-- Campo para nome completo -->
             <div class="input-group">
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                <label for="nome">Nome Completo</label> <!-- Rótulo do campo -->
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required> <!-- Campo de entrada -->
+                <!-- 
+                    type="text" - Campo de texto
+                    id="nome" - Identificador único
+                    name="nome" - Nome do campo para envio
+                    placeholder - Texto de exemplo
+                    required - Campo obrigatório
+                -->
             </div>
             
+            <!-- Campo para e-mail -->
             <div class="input-group">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <!-- type="email" - Valida automaticamente formato de e-mail -->
             </div>
             
+            <!-- Campo para senha -->
             <div class="input-group">
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                <!-- type="password" - Oculta os caracteres digitados -->
             </div>
             
+            <!-- Seleção do tipo de usuário (radio buttons) -->
             <div class="input-group">
                 <label for="tipo-usuario">Você é:</label>
                 <div class="tipo-usuario-options">
+                    <!-- Opção Prestador de Serviço -->
                     <label class="tipo-usuario-option">
-                        <input type="radio" name="tipo-usuario" value="prestador" required>
+                        <input type="radio" name="tipo-usuario" value="prestador" id="prestador-radio" required>
+                        <!-- 
+                            type="radio" - Botão de seleção única
+                            name="tipo-usuario" - Agrupa os radio buttons
+                            value="prestador" - Valor enviado se selecionado
+                            id="prestador-radio" - Identificador único
+                            required - Seleção obrigatória
+                        -->
                         <div class="option-content">
+                            <!-- Ícone SVG -->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
                             </svg>
-                            <span>Prestador de Serviço</span>
+                            <span>Prestador de Serviço</span> <!-- Texto da opção -->
                         </div>
                     </label>
                     
+                    <!-- Opção Cliente -->
                     <label class="tipo-usuario-option">
-                        <input type="radio" name="tipo-usuario" value="cliente" required>
+                        <input type="radio" name="tipo-usuario" value="cliente" id="cliente-radio" required>
                         <div class="option-content">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M12 4a4 4 0 014 4 4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 014-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z"/>
@@ -70,12 +100,47 @@
                 </div>
             </div>
             
+            <!-- Área de atuação (aparece apenas para prestadores) -->
+            <div class="input-group" id="area-atuacao-group" style="display: none;">
+                <!-- 
+                    style="display: none;" - Inicialmente oculto
+                    Será mostrado via JavaScript quando selecionar "Prestador"
+                -->
+                <label for="area-atuacao">Área de Atuação</label>
+                <select id="area-atuacao" name="area-atuacao" class="custom-select">
+                    <!-- Opção padrão (não selecionável) -->
+                    <option value="" disabled selected>Selecione sua área</option>
+                    <!-- Opções de áreas de atuação -->
+                    <option value="eletricista">Eletricista</option>
+                    <option value="encanador">Encanador</option>
+                    <option value="pintor">Pintor</option>
+                    <option value="pedreiro">Pedreiro</option>
+                    <option value="marceneiro">Marceneiro</option>
+                    <option value="jardineiro">Jardineiro</option>
+                    <option value="diarista">Diarista</option>
+                    <option value="tecnico-informatica">Técnico em Informática</option>
+                    <option value="designer">Designer</option>
+                    <option value="outro">Outro</option>
+                </select>
+                
+                <!-- Campo para "Outro" (aparece apenas quando selecionado) -->
+                <div class="input-group" id="outra-area-group" style="display: none; margin-top: 10px;">
+                    <label for="outra-area">Especifique sua área</label>
+                    <input type="text" id="outra-area" name="outra-area" placeholder="Digite sua área de atuação">
+                </div>
+            </div>
+            
+            <!-- Botão de submit do formulário -->
             <button type="submit" class="registro-button">Registrar</button>
         </form>
         
+        <!-- Link para página de login -->
         <div class="registro-links">
             Já tem uma conta? <a href="login.html">Fazer login</a>
         </div>
     </div>
+
+<script src="formulario.js" defer></script>
+</body>
 </body>
 </html>
