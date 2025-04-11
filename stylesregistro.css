@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 70px;
 }
 
@@ -112,8 +112,7 @@ body {
     background: #f0f0f0;
 }
 
-/* Estilos compartilhados dos formulários */
-.login-container,
+/* Container do formulário de registro */
 .registro-container {
     background: white;
     padding: 30px 40px 40px;
@@ -124,7 +123,6 @@ body {
     margin-top: 20px;
 }
 
-.login-container h1,
 .registro-container h1 {
     color: #0066cc;
     margin: 5px 0 25px;
@@ -158,8 +156,56 @@ body {
     box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.2);
 }
 
-/* Botões dos formulários */
-.login-button,
+/* Estilo para seleção de tipo de usuário */
+.tipo-usuario-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.tipo-usuario-option {
+    flex: 1;
+    position: relative;
+}
+
+.tipo-usuario-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.tipo-usuario-option .option-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.tipo-usuario-option input[type="radio"]:checked + .option-content {
+    border-color: #00aaff;
+    background-color: rgba(0, 170, 255, 0.1);
+}
+
+.tipo-usuario-option .option-content svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    fill: #0066cc;
+}
+
+.tipo-usuario-option .option-content span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Botão de registro */
 .registro-button {
     width: 100%;
     padding: 14px;
@@ -174,31 +220,35 @@ body {
     transition: background 300ms ease;
 }
 
-.login-button:hover,
 .registro-button:hover {
     background: linear-gradient(135deg, #0088cc, #004499);
 }
 
 /* Links adicionais */
-.login-links,
 .registro-links {
     margin-top: 25px;
     font-size: 14px;
+    color: #666;
 }
 
-.login-links a,
 .registro-links a {
     color: #0066cc;
     text-decoration: none;
+    font-weight: 500;
 }
 
-.login-links a:hover,
 .registro-links a:hover {
     text-decoration: underline;
 }
 
-.login-links span,
-.registro-links span {
-    color: #999;
-    margin: 0 10px;
+/* Responsividade */
+@media (max-width: 600px) {
+    .registro-container {
+        padding: 30px 20px;
+        width: 90%;
+    }
+    
+    .tipo-usuario-options {
+        flex-direction: column;
+    }
 }
