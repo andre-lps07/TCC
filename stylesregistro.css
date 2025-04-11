@@ -144,5 +144,168 @@ body {
 /* Grupos de inputs */
 .input-group {
     margin-bottom: 20px;     /* Espaço entre grupos */
-    text-align: left;        /* Alinha*/
+    text-align: left;        /* Alinha texto à esquerda */
+}
+
+.input-group label {
+    display: block;          /* Faz ocupar linha inteira */
+    margin-bottom: 8px;      /* Espaço abaixo do label */
+    color: #333;             /* Cor do texto */
+    font-weight: 500;        /* Peso da fonte */
+}
+
+.input-group input {
+    width: 100%;             /* Largura total */
+    padding: 12px 15px;      /* Espaçamento interno */
+    border: 1px solid #ddd;  /* Borda cinza */
+    border-radius: 6px;      /* Bordas arredondadas */
+    font-size: 16px;         /* Tamanho da fonte */
+}
+
+/* Efeito quando o input está em foco */
+.input-group input:focus {
+    outline: none;           /* Remove contorno padrão */
+    border-color: #00aaff;   /* Borda azul */
+    box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.2); /* Sombra azul suave */
+}
+
+/* ===== SELEÇÃO DE TIPO DE USUÁRIO ===== */
+.tipo-usuario-options {
+    display: flex;           /* Layout flexbox */
+    gap: 15px;               /* Espaço entre opções */
+    margin-top: 10px;        /* Margem superior */
+}
+
+.tipo-usuario-option {
+    flex: 1;                 /* Distribui espaço igualmente */
+    position: relative;      /* Para posicionamento absoluto dos filhos */
+}
+
+/* Esconde o radio button padrão */
+.tipo-usuario-option input[type="radio"] {
+    position: absolute;      /* Remove do fluxo normal */
+    opacity: 0;              /* Torna invisível */
+    width: 0;                /* Largura zero */
+    height: 0;               /* Altura zero */
+}
+
+/* Estilo personalizado para a opção */
+.tipo-usuario-option .option-content {
+    display: flex;           /* Layout flexbox */
+    flex-direction: column;  /* Itens em coluna */
+    align-items: center;     /* Centraliza horizontalmente */
+    padding: 20px 10px;      /* Espaçamento interno */
+    border: 2px solid #ddd;  /* Borda cinza */
+    border-radius: 8px;      /* Bordas arredondadas */
+    cursor: pointer;         /* Cursor de ponteiro */
+    transition: all 0.3s ease; /* Transição suave */
+    background-color: #f9f9f9; /* Fundo cinza muito claro */
+}
+
+/* Estilo quando o radio button está selecionado */
+.tipo-usuario-option input[type="radio"]:checked + .option-content {
+    border-color: #00aaff;   /* Borda azul */
+    background-color: rgba(0, 170, 255, 0.1); /* Fundo azul muito claro */
+}
+
+/* Ícones das opções */
+.tipo-usuario-option .option-content svg {
+    width: 40px;            /* Largura fixa */
+    height: 40px;           /* Altura fixa */
+    margin-bottom: 10px;    /* Espaço abaixo do ícone */
+    fill: #0066cc;          /* Cor azul para o ícone */
+}
+
+/* Texto das opções */
+.tipo-usuario-option .option-content span {
+    font-size: 14px;        /* Tamanho da fonte */
+    font-weight: 500;       /* Peso da fonte */
+    color: #333;            /* Cor do texto */
+}
+
+/* ===== BOTÃO DE REGISTRO ===== */
+.registro-button {
+    width: 100%;             /* Largura total */
+    padding: 14px;           /* Espaçamento interno */
+    background: linear-gradient(135deg, #00aaff, #0066cc); /* Gradiente azul */
+    color: white;            /* Texto branco */
+    border: none;            /* Remove borda */
+    border-radius: 6px;      /* Bordas arredondadas */
+    font-size: 16px;         /* Tamanho da fonte */
+    font-weight: 600;        /* Peso da fonte (negrito) */
+    cursor: pointer;         /* Cursor de ponteiro */
+    margin-top: 10px;        /* Margem superior */
+    transition: background 300ms ease; /* Transição suave apenas para o fundo */
+}
+
+/* Efeito hover no botão */
+.registro-button:hover {
+    background: linear-gradient(135deg, #0088cc, #004499); /* Gradiente azul mais escuro */
+}
+
+/* ===== LINKS ADICIONAIS ===== */
+.registro-links {
+    margin-top: 25px;        /* Margem superior */
+    font-size: 14px;         /* Tamanho da fonte */
+    color: #666;             /* Cor do texto cinza */
+}
+
+.registro-links a {
+    color: #0066cc;          /* Cor azul */
+    text-decoration: none;   /* Remove sublinhado */
+    font-weight: 500;        /* Peso da fonte */
+}
+
+/* Efeito hover nos links */
+.registro-links a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+    /* Ajustes para telas menores que 600px */
+    .registro-container {
+        padding: 30px 20px;  /* Reduz o padding */
+        width: 90%;          /* Largura relativa */
+    }
+    
+    /* Opções em coluna em telas pequenas */
+    .tipo-usuario-options {
+        flex-direction: column;
+    }
+}
+
+/* ===== SELECT PERSONALIZADO ===== */
+.custom-select {
+    width: 100%;             /* Largura total */
+    padding: 12px 15px;      /* Espaçamento interno */
+    border: 1px solid #ddd;  /* Borda cinza */
+    border-radius: 6px;      /* Bordas arredondadas */
+    font-size: 16px;         /* Tamanho da fonte */
+    background-color: white; /* Fundo branco */
+    appearance: none;        /* Remove estilo padrão */
+    -webkit-appearance: none; /* Para navegadores WebKit */
+    -moz-appearance: none;   /* Para Firefox */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230066cc'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: right 15px center; /* Posição da seta */
+    background-size: 20px;   /* Tamanho da seta */
+    cursor: pointer;         /* Cursor de ponteiro */
+}
+
+/* Efeito quando o select está em foco */
+.custom-select:focus {
+    outline: none;           /* Remove contorno padrão */
+    border-color: #00aaff;   /* Borda azul */
+    box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.2); /* Sombra azul suave */
+}
+
+/* Transição suave para mostrar/ocultar elementos */
+.input-group {
+    transition: all 0.3s ease; /* Anima todas as propriedades */
+}
+
+/* Estilo para as opções do select */
+.custom-select option {
+    padding: 10px;          /* Espaçamento interno */
 }
