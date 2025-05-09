@@ -204,15 +204,48 @@ body {
 }
 
 /* ===== RESPONSIVIDADE ===== */
-@media (max-width: 600px) {
-    /* Ajustes para telas menores que 600px */
-    .registro-container {
-        padding: 30px 20px;  /* Reduz o padding */
-        width: 90%;          /* Largura relativa */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 16px;
     }
-    
-    /* Opções em coluna em telas pequenas */
+
+    .navegacao {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .lista-menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .area-login {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+        gap: 8px;
+    }
+
+    .login-container {
+        padding: 20px;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .input-group input {
+        width: 100%;
+    }
+
     .tipo-usuario-options {
         flex-direction: column;
     }
 }
+
