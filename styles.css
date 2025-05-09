@@ -120,3 +120,17 @@ body {
 .botao-registro:hover {
     background: #f0f0f0; /* Fundo cinza muito claro */
 }
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+    /* Ajustes para telas menores que 600px */
+    .registro-container {
+        padding: 30px 20px;  /* Reduz o padding */
+        width: 90%;          /* Largura relativa */
+    }
+    
+    /* Opções em coluna em telas pequenas */
+    .tipo-usuario-options {
+        flex-direction: column;
+    }
+}
