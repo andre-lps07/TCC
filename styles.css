@@ -112,35 +112,37 @@ body {
 
 @media (max-width: 768px) {
     .cabecalho {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 16px;
-        gap: 12px;
+        padding: 8px 12px;
+        gap: 8px;
     }
 
     .logo h1 {
-        font-size: 20px;
+        font-size: 16px;
+        white-space: nowrap;
     }
 
-    .navegacao {
-        width: 100%;
-        justify-content: flex-start;
-    }
-
-    .lista-menu {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .area-login {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 10px;
+    .lista-menu li a {
+        font-size: 14px;
+        padding: 4px 8px;
     }
 
     .botao-login, .botao-registro {
-        padding: 8px 14px;
-        font-size: 14px;
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+
+    .navegacao {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .area-login {
+        flex-shrink: 0;
+        gap: 6px;
+    }
+
+    .lista-menu {
+        gap: 12px;
+        flex-wrap: nowrap;
     }
 }
