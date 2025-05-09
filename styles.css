@@ -10,7 +10,6 @@ body {
     padding-top: 70px;
 }
 
-/* Cabeçalho */
 .cabecalho {
     background: linear-gradient(135deg, #00aaff, #0066cc);
     color: white;
@@ -24,48 +23,45 @@ body {
     top: 0;
     z-index: 1000;
     height: 70px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 10px;
-    overflow-x: auto; /* Evita quebra visual */
+    overflow-x: auto;
 }
 
 .logo {
-    flex: 1;
-    min-width: 200px;
+    flex-shrink: 0;
+    min-width: max-content;
 }
 
 .logo h1 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 28px;
+    white-space: nowrap;
 }
 
 .navegacao {
+    flex: 1;
     display: flex;
     justify-content: center;
-    flex: 2;
-    min-width: 200px;
+    overflow-x: auto;
 }
 
 .lista-menu {
     display: flex;
     list-style: none;
-    gap: 16px;
-    margin: 0;
-    padding: 0;
+    gap: 12px;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .lista-menu li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 16px;
+    padding: 8px 12px;
     border-radius: 4px;
     transition: all 300ms ease;
-    display: inline-block;
-    line-height: 24px;
     white-space: nowrap;
 }
 
@@ -75,16 +71,14 @@ body {
 
 .area-login {
     display: flex;
-    gap: 16px;
-    flex: 1;
+    gap: 12px;
+    flex-shrink: 0;
+    min-width: max-content;
     justify-content: flex-end;
-    min-width: 200px;
-    flex-wrap: wrap;
 }
 
-.botao-login,
-.botao-registro {
-    padding: 8px 16px;
+.botao-login, .botao-registro {
+    padding: 6px 12px;
     border-radius: 4px;
     text-decoration: none;
     font-weight: 500;
@@ -93,6 +87,7 @@ body {
     display: inline-block;
     line-height: 24px;
     text-align: center;
+    font-size: 14px;
 }
 
 .botao-login {
@@ -101,17 +96,51 @@ body {
     background: transparent;
 }
 
-.botao-login:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
 .botao-registro {
     color: #0066cc;
     background: white;
     border: 1px solid white;
 }
 
+.botao-login:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 .botao-registro:hover {
     background: #f0f0f0;
 }
 
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .navegacao {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .lista-menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .area-login {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .botao-login, .botao-registro {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
