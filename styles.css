@@ -1,4 +1,4 @@
-/* Estilos do cabeçalho */
+/* Estilos existentes mantidos */
 .cabecalho {
     background: linear-gradient(135deg, #00aaff, #0066cc);
     color: white;
@@ -40,6 +40,10 @@
     align-items: center;
 }
 
+.lista-menu li {
+    position: relative; /* Necessário para posicionar o submenu */
+}
+
 .lista-menu li a {
     color: white;
     text-decoration: none;
@@ -51,7 +55,37 @@
     line-height: 24px;
 }
 
-.lista-menu li a:hover {
+/* Estilização do submenu */
+.lista-menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007acc;
+    border-radius: 4px;
+    padding: 8px 0;
+    display: none;
+    flex-direction: column;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.lista-menu li:hover > ul {
+    display: flex; /* Mostra submenu ao passar o mouse */
+}
+
+.lista-menu li ul li {
+    padding: 0;
+    margin: 0;
+}
+
+.lista-menu li ul li a {
+    padding: 8px 16px;
+    white-space: nowrap;
+}
+
+/* Hover no submenu */
+.lista-menu li ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -94,19 +128,20 @@
 .botao-registro:hover {
     background: #f0f0f0;
 }
-/* Para telas pequenas (celulares) */
+
+/* Responsividade */
 @media (max-width: 768px) {
     .cabecalho {
-        overflow-x: auto;     /* Permite rolar pro lado */
-        white-space: nowrap;  /* Evita quebra de linha */
-        flex-wrap: nowrap;    /* Garante tudo na mesma linha */
+        overflow-x: auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
         padding: 10px 20px;
         gap: 20px;
-        scrollbar-width: none; /* Firefox: esconder barra */
+        scrollbar-width: none;
     }
 
     .cabecalho::-webkit-scrollbar {
-        display: none;         /* Chrome: esconder barra */
+        display: none;
     }
 
     .navegacao .lista-menu {
@@ -116,54 +151,20 @@
     .logo h1,
     .lista-menu li a,
     .area-login a {
-        white-space: nowrap; /* Evita quebrar texto */
+        white-space: nowrap;
+    }
+
+    /* Submenu em telas pequenas: mostrar abaixo */
+    .lista-menu li ul {
+        position: static;
+        display: none;
+        background: #007acc;
+        box-shadow: none;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .lista-menu li:hover > ul {
+        display: block;
     }
 }
-
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
-    .cabecalho {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 16px;
-    }
-
-    .navegacao {
-        width: 100%;
-        justify-content: flex-start;
-        margin-top: 10px;
-    }
-
-    .lista-menu {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .area-login {
-        width: 100%;
-        justify-content: flex-start;
-        margin-top: 10px;
-        gap: 8px;
-    }
-
-    .login-container {
-        padding: 20px;
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    form {
-        width: 100%;
-    }
-
-    .input-group input {
-        width: 100%;
-    }
-
-    .tipo-usuario-options {
-        flex-direction: column;
-    }
-}
-
-
