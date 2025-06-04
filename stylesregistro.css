@@ -296,3 +296,50 @@ body {
 .custom-select option {
     padding: 10px;          /* Espaçamento interno */
 }
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 16px;
+    }
+
+    .navegacao {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .lista-menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .area-login {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+        gap: 8px;
+    }
+
+    .login-container {
+        padding: 20px;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .input-group input {
+        width: 100%;
+    }
+
+    .tipo-usuario-options {
+        flex-direction: column;
+    }
+}
+
