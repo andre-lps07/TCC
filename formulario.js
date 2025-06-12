@@ -1,18 +1,5 @@
-// formulario.js
-
-/**
- * Script de controle do formulário de registro
- * Gerencia a exibição condicional dos campos baseado na seleção do usuário
- */
-
-// Aguarda o DOM estar completamente carregado antes de executar o script
 document.addEventListener('DOMContentLoaded', function() {
     
-    // =============================================
-    // CONTROLE DA ÁREA DE ATUAÇÃO (PRESTADOR/CLIENTE)
-    // =============================================
-    
-    // Seleciona todos os radio buttons do tipo de usuário
     const radiosTipoUsuario = document.querySelectorAll('input[name="tipo-usuario"]');
     
     // Adiciona um event listener para cada radio button
