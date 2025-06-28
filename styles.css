@@ -1,12 +1,27 @@
 /* Corpo e fonte */
 body {
-  background-color: #f9fafb;
+  background-color: #f5f7fa;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar - azul mais escuro */
+.custom-navbar {
+  background-color: #093269 !important;
+}
+
+/* Links navbar menos opacos */
+.nav-link.text-light-75 {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.nav-link.text-light-75:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 /* Seção hero */
 section.bg-info {
-  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  background: linear-gradient(135deg, #0d6efd, #4a7bd1);
   color: white;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
@@ -24,8 +39,8 @@ section.bg-info a.btn {
 }
 
 section.bg-info a.btn:hover {
-  background-color: #e0e0e0;
-  color: #6610f2;
+  background-color: #e0e6f9;
+  color: #0d47a1;
   box-shadow: 0 6px 15px rgb(255 255 255 / 0.6);
   transform: translateY(-3px);
 }
@@ -47,24 +62,27 @@ form input.form-control-lg {
 }
 
 form input.form-control-lg:focus {
-  border-color: #6610f2;
-  box-shadow: 0 0 8px #6610f2;
+  border-color: #0d47a1;
+  box-shadow: 0 0 8px #0d47a1;
   outline: none;
 }
 
 form button.btn-primary {
   border-radius: 50px;
   font-weight: 600;
+  background-color: #0d47a1;
+  border-color: #0d47a1;
   transition: background-color 0.3s ease;
 }
 
 form button.btn-primary:hover {
-  background-color: #5a0bcf;
+  background-color: #08306b;
+  border-color: #08306b;
 }
 
 /* Categorias populares */
 .bg-primary-subtle {
-  background-color: #e7f1ff !important;
+  background-color: #dbe6fb !important;
 }
 
 .bg-success-subtle {
@@ -101,7 +119,7 @@ form button.btn-primary:hover {
 .card-title {
   font-weight: 700;
   font-size: 1.25rem;
-  color: #333;
+  color: #222;
 }
 
 /* Títulos seções */
