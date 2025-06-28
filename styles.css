@@ -1,0 +1,129 @@
+/* Corpo e fonte */
+body {
+  background-color: #f9fafb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Seção hero */
+section.bg-info {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+section.bg-info h1 {
+  letter-spacing: 1px;
+}
+
+section.bg-info a.btn {
+  font-weight: 600;
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgb(255 255 255 / 0.35);
+  transition: all 0.3s ease;
+}
+
+section.bg-info a.btn:hover {
+  background-color: #e0e0e0;
+  color: #6610f2;
+  box-shadow: 0 6px 15px rgb(255 255 255 / 0.6);
+  transform: translateY(-3px);
+}
+
+/* Formulário */
+form.row.g-3 {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+form input.form-control-lg {
+  border-radius: 8px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.07);
+  transition: border-color 0.3s ease;
+}
+
+form input.form-control-lg:focus {
+  border-color: #6610f2;
+  box-shadow: 0 0 8px #6610f2;
+  outline: none;
+}
+
+form button.btn-primary {
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+form button.btn-primary:hover {
+  background-color: #5a0bcf;
+}
+
+/* Categorias populares */
+.bg-primary-subtle {
+  background-color: #e7f1ff !important;
+}
+
+.bg-success-subtle {
+  background-color: #e6f4ea !important;
+}
+
+.bg-danger-subtle {
+  background-color: #fde8e8 !important;
+}
+
+.bg-warning-subtle {
+  background-color: #fff7e6 !important;
+}
+
+/* Cartões serviços */
+.card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Títulos seções */
+h2 {
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.8px;
+}
+
+/* Espaçamento geral */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 767.98px) {
+  form.row.g-3 {
+    padding: 1.5rem 1rem;
+  }
+
+  .card img {
+    height: 140px;
+  }
+}
