@@ -67,4 +67,38 @@ document.addEventListener('DOMContentLoaded', function() {
         // Dispara manualmente o evento change para configurar o estado inicial
         radioSelecionado.dispatchEvent(new Event('change'));
     }
+
+document.addEventListener('DOMContentLoaded', function() {
+  // ...seu código atual...
+
+  // --- INTEGRAÇÃO API DE CEP ---
+  const cepInput = document.getElementById('cep');
+  const cidadeInput = document.getElementById('cidade');
+
+  if (cepInput && cidadeInput) {
+    cepInput.addEventListener('blur', () => {
+      let cep = cepInput.value.replace(/\D/g, '');
+      if (cep.length === 8) {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+          .then(response => response.json())
+          .then(data => {
+            if (!data.erro) {
+              cidadeInput.value = data.localidade;
+            } else {
+              cidadeInput.value = '';
+              alert('CEP não encontrado!');
+            }
+          })
+          .catch(() => {
+            alert('Erro ao consultar o CEP.');
+          });
+      } else {
+        cidadeInput.value = '';
+        alert('CEP inválido!');
+      }
+    });
+  }
+});
+
+    
 });
