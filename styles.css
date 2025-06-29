@@ -6,68 +6,37 @@ body {
   padding: 0;
 }
 
-/* Navbar - cabeçalho com degrade azul */
 .navbar {
-  padding: 1rem 0;
-  background: linear-gradient(135deg, #0d6efd, #6610f2);
-  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.4);
+  background-color: #fff !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Navbar links - branco e negrito */
 .navbar .nav-link,
 .navbar .navbar-brand {
-  color: #fff !important;
+  color: #000 !important;
   font-weight: 600;
 }
 
-/* Navbar links ativo */
-.navbar .nav-link.active {
-  text-decoration: underline;
-}
-
-/* Botão toggler navbar cor branca */
 .navbar-toggler-icon {
-  filter: brightness(0) invert(1);
+  filter: none; /* Remove o invert para o ícone ficar preto */
 }
-
 /* ====================== Páginas index e formulário ====================== */
 
-/* Seção hero da index */
-section.bg-info {
-  background: linear-gradient(135deg, #0d6efd, #6610f2);
-  color: white;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+.hero-section {
+  background: linear-gradient(135deg, #256bd4, #050024);
+  /* Ajusta a cor da sombra para combinar */
+  box-shadow: 0 8px 24px rgba(5, 0, 36, 0.5);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  box-shadow: 0 8px 24px rgba(30, 60, 114, 0.5);
 }
 
-section.bg-info h1 {
-  letter-spacing: 1px;
-}
 
-section.bg-info a.btn {
-  font-weight: 600;
-  padding: 0.9rem 2.2rem;
-  border-radius: 50px;
-  box-shadow: 0 4px 12px rgb(255 255 255 / 0.35);
-  transition: all 0.3s ease;
-  color: #6610f2;
-  background-color: #fff;
-}
-
-section.bg-info a.btn:hover {
-  background-color: #e0e0e0;
-  color: #6610f2;
-  box-shadow: 0 6px 15px rgb(255 255 255 / 0.6);
-  transform: translateY(-3px);
-}
-
-/* Formulário da index */
 form.row.g-3 {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.1);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.15);
   max-width: 900px;
   margin: 0 auto 3rem;
 }
@@ -79,20 +48,26 @@ form input.form-control-lg {
 }
 
 form input.form-control-lg:focus {
-  border-color: #6610f2;
-  box-shadow: 0 0 8px #6610f2;
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px #4a90e2;
   outline: none;
 }
 
-form button.btn-primary {
-  border-radius: 50px;
+form button.btn-light {
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgb(255 255 255 / 0.4);
+  color: #1c3f94;
+  transition: all 0.3s ease;
 }
 
-form button.btn-primary:hover {
-  background-color: #5a0bcf;
+form button.btn-light:hover {
+  background-color: #e0e6f7;
+  color: #103070;
+  box-shadow: 0 6px 15px rgb(255 255 255 / 0.6);
+  transform: translateY(-3px);
 }
+
 
 /* Categorias populares */
 .bg-primary-subtle {
@@ -212,7 +187,7 @@ section {
   user-select: none;
 }
 
-.btn-check:checked + .btn-outline-primary,
+.btn-check:checked+.btn-outline-primary,
 .btn-outline-primary:hover,
 .btn-outline-primary:focus {
   background-color: #0d6efd !important;
@@ -248,5 +223,6 @@ section {
 .card-img-top {
   height: 180px;
   object-fit: cover;
-  object-position: center top; /* foca no topo da imagem */
+  object-position: center top;
+  /* foca no topo da imagem */
 }

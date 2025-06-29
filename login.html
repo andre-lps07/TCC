@@ -11,46 +11,48 @@
 </head>
 
 <body>
-   <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary navbar-dark py-3 shadow-sm">
-        <div class="container align-items-center">
-            <!-- Logo com link para index -->
-            <a class="navbar-brand d-flex align-items-center gap-2 fs-3" href="index.html">
-                <i class="bi bi-shop-window fs-2"></i>
-                <span>Workzy</span>
-            </a>
+  <nav class="navbar navbar-expand-lg navbar-light py-3 shadow-sm">
+    <div class="container align-items-center">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2 fs-3" href="index.html">
+        <i class="bi bi-shop-window fs-2"></i>
+        <span>Workzy</span>
+      </a>
 
-            <!-- Botão do menu para mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <!-- Botão para mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <!-- Itens do menu -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Centralizado: barra de busca -->
-                <form class="d-none d-lg-flex mx-auto" action="busca.html" style="max-width: 400px; width: 100%;">
-                    <div class="input-group">
-                        <input class="form-control rounded-start-pill px-4 py-2" type="search"
-                            placeholder="Buscar profissionais..." aria-label="Buscar" />
-                        <button class="btn btn-light rounded-end-pill px-3" type="submit">
-                            <i class="bi bi-search text-primary"></i>
-                        </button>
-                    </div>
-                </form>
+      <!-- Itens do menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <form class="d-none d-lg-flex mx-auto gap-2 align-items-center" action="busca.html"
+          style="max-width: 550px; width: 100%;">
+          <input type="search" name="profissional" class="form-control rounded-start" placeholder="O que você precisa?"
+            aria-label="Buscar profissional" required style="min-width: 220px;" />
 
-                <!-- Botões de login/registro -->
-                <div class="d-flex gap-2 ms-3">
-                    <a href="login.html" class="btn btn-outline-light px-3 py-2">
-                        <i class="bi bi-box-arrow-in-right me-1"></i>Login
-                    </a>
-                    <a href="registro.html" class="btn btn-light text-primary px-3 py-2">
-                        <i class="bi bi-person-plus me-1"></i>Registrar
-                    </a>
-                </div>
-            </div>
+          <input type="search" name="cidade" class="form-control rounded-end" placeholder="Informe sua cidade"
+            aria-label="Buscar cidade" required style="min-width: 140px;" />
+
+          <button class="btn btn-primary px-4 py-2" type="submit">
+            Buscar
+          </button>
+        </form>
+
+
+        <!-- Botões login/registro -->
+        <div class="d-flex gap-2 ms-3">
+          <a href="login.html" class="btn btn-outline-dark px-3 py-2">
+            <i class="bi bi-box-arrow-in-right me-1"></i>Login
+          </a>
+          <a href="registro.html" class="btn btn-outline-dark  px-3 py-2">
+            <i class="bi bi-person-plus me-1"></i>Registrar
+          </a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
   <main class="login-container">
     <h2 class="text-center mb-4">Faça login na sua conta</h2>
@@ -58,26 +60,12 @@
     <form action="#" method="post">
       <div class="mb-3">
         <label for="email" class="form-label">E-mail</label>
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          name="email"
-          placeholder="Digite seu e-mail"
-          required
-        />
+        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required />
       </div>
 
       <div class="mb-3">
         <label for="senha" class="form-label">Senha</label>
-        <input
-          type="password"
-          class="form-control"
-          id="senha"
-          name="senha"
-          placeholder="Digite sua senha"
-          required
-        />
+        <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required />
       </div>
 
       <div class="d-grid">
