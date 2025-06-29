@@ -245,21 +245,8 @@ section {
   color: #999;
 }
 
-/* ====================== Mobile ====================== */
-@media (max-width: 767.98px) {
-  /* Ajusta padding do form da index para telas pequenas */
-  form.row.g-3 {
-    padding: 1.5rem 1rem;
-  }
-
-  /* Ajusta altura das imagens nos cards na index */
-  .card img {
-    height: 140px;
-  }
-
-  /* Reduz largura dos botões tipo usuario no registro */
-  .btn-outline-primary {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  object-position: center top; /* foca no topo da imagem */
 }
