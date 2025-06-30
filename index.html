@@ -25,31 +25,51 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Itens do menu -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Versão MOBILE da barra de pesquisa -->
-        <form class="d-block d-lg-none mt-3 px-2" action="busca.html">
-          <div class="input-group">
-            <input type="search" name="profissional" class="form-control" placeholder="Profissional" required>
-            <input type="search" name="cidade" class="form-control" placeholder="Cidade" required>
-            <button class="btn btn-dark" type="submit">Buscar</button>
-          </div>
-        </form>
+     <!-- Itens do menu -->
+<div class="collapse navbar-collapse" id="navbarNav">
 
+  <!-- Barra de busca - DESKTOP -->
+  <form class="d-none d-lg-flex mx-auto gap-2 align-items-center" action="busca.html"
+    style="max-width: 550px; width: 100%;">
+    <input type="search" name="profissional" class="form-control rounded-start" placeholder="O que você precisa?"
+      aria-label="Buscar profissional" required style="min-width: 220px;" />
 
+    <input type="search" name="cidade" class="form-control rounded-end" placeholder="Informe sua cidade"
+      aria-label="Buscar cidade" required style="min-width: 140px;" />
 
-        <!-- Botões login/registro -->
-        <div class="d-flex gap-2 ms-3">
-          <a href="login.html" class="btn btn-outline-dark px-3 py-2">
-            <i class="bi bi-box-arrow-in-right me-1"></i>Login
-          </a>
-          <a href="registro.html" class="btn btn-outline-dark  px-3 py-2">
-            <i class="bi bi-person-plus me-1"></i>Registrar
-          </a>
+    <button class="btn btn-dark" type="submit">
+      Buscar
+    </button>
+  </form>
+
+  <!-- Barra de busca - MOBILE -->
+  <form class="d-block d-lg-none mt-3 w-100" action="busca.html">
+    <div class="container">
+      <div class="row g-2">
+        <div class="col-12">
+          <input type="search" name="profissional" class="form-control" placeholder="Profissional" required>
+        </div>
+        <div class="col-12">
+          <input type="search" name="cidade" class="form-control" placeholder="Cidade" required>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-dark w-100" type="submit">Buscar</button>
         </div>
       </div>
     </div>
-  </nav>
+  </form>
+
+  <!-- Botões login/registro -->
+  <div class="d-flex gap-2 ms-3">
+    <a href="login.html" class="btn btn-outline-dark px-3 py-2">
+      <i class="bi bi-box-arrow-in-right me-1"></i>Login
+    </a>
+    <a href="registro.html" class="btn btn-outline-dark  px-3 py-2">
+      <i class="bi bi-person-plus me-1"></i>Registrar
+    </a>
+  </div>
+</div>
+
 
   <!-- Hero reduzido e direto -->
   <section class="py-5 text-white text-center hero-section">
