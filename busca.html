@@ -12,68 +12,69 @@
 </head>
 
 <body>
- <nav class="navbar navbar-expand-lg navbar-light py-3 shadow-sm">
-  <div class="container align-items-center">
-    <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center gap-2 fs-3" href="index.html">
-      <i class="bi bi-shop-window fs-2"></i>
-      <span>Workzy</span>
-    </a>
+  <nav class="navbar navbar-expand-lg navbar-light py-3 shadow-sm">
+    <div class="container align-items-center">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2 fs-3" href="index.html">
+        <i class="bi bi-shop-window fs-2"></i>
+        <span>Workzy</span>
+      </a>
 
-    <!-- Botão para mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Botão para mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Itens do menu -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <div class="w-100 d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-lg-between">
+      <!-- Itens do menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div
+          class="w-100 d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-lg-between">
 
-        <!-- BARRA DE BUSCA - MOBILE -->
-        <form class="d-block d-lg-none w-100 my-3" action="busca.html">
-          <div class="container px-0">
-            <div class="row g-2">
-              <div class="col-12">
-                <input type="search" name="profissional" class="form-control" placeholder="Profissional" required>
-              </div>
-              <div class="col-12">
-                <input type="search" name="cidade" class="form-control" placeholder="Cidade" required>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-dark w-100" type="submit">Buscar</button>
+          <!-- BARRA DE BUSCA - MOBILE -->
+          <form class="d-block d-lg-none w-100 my-3" action="busca.html">
+            <div class="container px-0">
+              <div class="row g-2">
+                <div class="col-12">
+                  <input type="search" name="profissional" class="form-control" placeholder="Profissional" required>
+                </div>
+                <div class="col-12">
+                  <input type="search" name="cidade" class="form-control" placeholder="Cidade" required>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-dark w-100" type="submit">Buscar</button>
+                </div>
               </div>
             </div>
+          </form>
+
+          <!-- BARRA DE BUSCA - DESKTOP -->
+          <form class="d-none d-lg-flex mx-auto gap-2 align-items-center" action="busca.html"
+            style="max-width: 550px; width: 100%;">
+            <input type="search" name="profissional" class="form-control rounded-start"
+              placeholder="O que você precisa?" aria-label="Buscar profissional" required style="min-width: 220px;" />
+
+            <input type="search" name="cidade" class="form-control rounded-end" placeholder="Informe sua cidade"
+              aria-label="Buscar cidade" required style="min-width: 140px;" />
+
+            <button class="btn btn-dark" type="submit">
+              Buscar
+            </button>
+          </form>
+
+          <!-- BOTÕES LOGIN/REGISTRO -->
+          <div class="d-flex gap-2 ms-lg-3 mt-3 mt-lg-0">
+            <a href="login.html" class="btn btn-outline-dark px-3 py-2">
+              <i class="bi bi-box-arrow-in-right me-1"></i>Login
+            </a>
+            <a href="registro.html" class="btn btn-outline-dark  px-3 py-2">
+              <i class="bi bi-person-plus me-1"></i>Registrar
+            </a>
           </div>
-        </form>
-
-        <!-- BARRA DE BUSCA - DESKTOP -->
-        <form class="d-none d-lg-flex mx-auto gap-2 align-items-center" action="busca.html"
-          style="max-width: 550px; width: 100%;">
-          <input type="search" name="profissional" class="form-control rounded-start" placeholder="O que você precisa?"
-            aria-label="Buscar profissional" required style="min-width: 220px;" />
-
-          <input type="search" name="cidade" class="form-control rounded-end" placeholder="Informe sua cidade"
-            aria-label="Buscar cidade" required style="min-width: 140px;" />
-
-          <button class="btn btn-dark" type="submit">
-            Buscar
-          </button>
-        </form>
-
-        <!-- BOTÕES LOGIN/REGISTRO -->
-        <div class="d-flex gap-2 ms-lg-3 mt-3 mt-lg-0">
-          <a href="login.html" class="btn btn-outline-dark px-3 py-2">
-            <i class="bi bi-box-arrow-in-right me-1"></i>Login
-          </a>
-          <a href="registro.html" class="btn btn-outline-dark  px-3 py-2">
-            <i class="bi bi-person-plus me-1"></i>Registrar
-          </a>
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   </nav>
 
@@ -88,142 +89,173 @@
 
   <!-- Resultados da busca -->
   <div class="container mt-5">
-    <div class="row g-4 justify-content-center">
+  <div class="row g-4 justify-content-center">
 
-      <!-- Card 1 -->
-      <div class="col-md-4">
-        <div class="card border-0 shadow h-100">
-          <img src="Encanadores/Encanador1.jpg" loading="lazy" class="card-img-top" alt="Foto João">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">João da Silva</h5>
-            <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
-            <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
-            <p class="text-muted"><strong>Experiência:</strong> 10 anos</p>
-            <div class="mb-3 text-warning">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <span class="ms-2 text-dark fw-semibold">5,0</span>
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card border-0 shadow h-100">
+        <img src="Encanadores/Encanador1.jpg" loading="lazy" class="card-img-top" alt="Foto João">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">João da Silva</h5>
+          <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
+          <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
+          <p class="text-muted mb-1"><strong>Experiência:</strong> 10 anos</p>
+          <p class="mb-2 text-muted d-flex align-items-center" style="font-weight: 500;">
+            Modalidade:
+            <span class="badge bg-success ms-2 d-flex align-items-center">
+              <i class="bi bi-person-fill me-1"></i> Presencial
+            </span>
+          </p>
+          <div class="mb-3 d-flex align-items-center" style="gap: 6px;">
+            <div class="d-flex text-warning align-items-center" style="line-height: 1;">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
             </div>
-            <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
+            <span class="text-dark fw-semibold" style="line-height: 1;">5,0</span>
+            <span class="fw-medium text-dark" style="font-size: 0.85rem; line-height: 1; margin-top: 1px;">(23 avaliações)</span>
           </div>
+          <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-4">
-        <div class="card border-0 shadow h-100">
-          <img src="Encanadores/encanador2.jpg" loading="lazy" class="card-img-top" alt="Foto Carlos">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Carlos Mendes</h5>
-            <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
-            <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
-            <p class="text-muted"><strong>Experiência:</strong> 7 anos</p>
-            <div class="mb-3 text-warning">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-half"></i>
-              <span class="ms-2 text-dark fw-semibold">4,7</span>
-            </div>
-            <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-4">
-        <div class="card border-0 shadow h-100">
-          <img src="Encanadores/encanador3.jpg" loading="lazy" class="card-img-top" alt="Foto Marcos">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Marcos Souza</h5>
-            <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
-            <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
-            <p class="text-muted"><strong>Experiência:</strong> 5 anos</p>
-            <div class="mb-3 text-warning">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star"></i>
-              <i class="bi bi-star"></i>
-              <span class="ms-2 text-dark fw-semibold">3,0</span>
-            </div>
-            <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-md-4">
-        <div class="card border-0 shadow h-100">
-          <img src="Encanadores/encanador4.jpg" loading="lazy" class="card-img-top" alt="Foto André">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">André Pires</h5>
-            <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
-            <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
-            <p class="text-muted"><strong>Experiência:</strong> 12 anos</p>
-            <div class="mb-3 text-warning">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star"></i>
-              <span class="ms-2 text-dark fw-semibold">4,0</span>
-            </div>
-            <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="col-md-4">
-        <div class="card border-0 shadow h-100">
-          <img src="Encanadores/encanador5.jpg" loading="lazy" class="card-img-top" alt="Foto Luciano">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Luciano Brito</h5>
-            <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
-            <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
-            <p class="text-muted"><strong>Experiência:</strong> 8 anos</p>
-            <div class="mb-3 text-warning">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-half"></i>
-              <i class="bi bi-star"></i>
-              <span class="ms-2 text-dark fw-semibold">3,5</span>
-            </div>
-            <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="col-md-4">
-        <div class="card border-0 shadow h-100">
-          <img src="Encanadores/encanador6.jpg" loading="lazy" class="card-img-top" alt="Foto Paulo">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Paulo Lima</h5>
-            <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
-            <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
-            <p class="text-muted"><strong>Experiência:</strong> 9 anos</p>
-            <div class="mb-3 text-warning">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-half"></i>
-              <span class="ms-2 text-dark fw-semibold">4,5</span>
-            </div>
-            <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card border-0 shadow h-100">
+        <img src="Encanadores/encanador2.jpg" loading="lazy" class="card-img-top" alt="Foto Carlos">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Carlos Mendes</h5>
+          <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
+          <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
+          <p class="text-muted mb-1"><strong>Experiência:</strong> 7 anos</p>
+          <p class="mb-2 text-muted d-flex align-items-center" style="font-weight: 500;">
+            Modalidade:
+            <span class="badge bg-success ms-2 d-flex align-items-center">
+              <i class="bi bi-person-fill me-1"></i> Presencial
+            </span>
+          </p>
+          <div class="mb-3 d-flex align-items-center" style="gap: 6px;">
+            <div class="d-flex text-warning align-items-center" style="line-height: 1;">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+            </div>
+            <span class="text-dark fw-semibold" style="line-height: 1;">4,7</span>
+            <span class="fw-medium text-dark" style="font-size: 0.85rem; line-height: 1; margin-top: 1px;">(19 avaliações)</span>
+          </div>
+          <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card border-0 shadow h-100">
+        <img src="Encanadores/encanador3.jpg" loading="lazy" class="card-img-top" alt="Foto Marcos">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Marcos Souza</h5>
+          <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
+          <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
+          <p class="text-muted mb-1"><strong>Experiência:</strong> 5 anos</p>
+          <p class="mb-2 text-muted d-flex align-items-center" style="font-weight: 500;">
+            Modalidade:
+            <span class="badge bg-success ms-2 d-flex align-items-center">
+              <i class="bi bi-person-fill me-1"></i> Presencial
+            </span>
+          </p>
+          <div class="mb-3 d-flex align-items-center" style="gap: 6px;">
+            <div class="d-flex text-warning align-items-center" style="line-height: 1;">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
+            </div>
+            <span class="text-dark fw-semibold" style="line-height: 1;">3,0</span>
+            <span class="fw-medium text-dark" style="font-size: 0.85rem; line-height: 1; margin-top: 1px;">(11 avaliações)</span>
+          </div>
+          <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card border-0 shadow h-100">
+        <img src="Encanadores/encanador4.jpg" loading="lazy" class="card-img-top" alt="Foto André">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">André Pires</h5>
+          <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
+          <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
+          <p class="text-muted mb-1"><strong>Experiência:</strong> 12 anos</p>
+          <p class="mb-2 text-muted d-flex align-items-center" style="font-weight: 500;">
+            Modalidade:
+            <span class="badge bg-success ms-2 d-flex align-items-center">
+              <i class="bi bi-person-fill me-1"></i> Presencial
+            </span>
+          </p>
+          <div class="mb-3 d-flex align-items-center" style="gap: 6px;">
+            <div class="d-flex text-warning align-items-center" style="line-height: 1;">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+            </div>
+            <span class="text-dark fw-semibold" style="line-height: 1;">4,0</span>
+            <span class="fw-medium text-dark" style="font-size: 0.85rem; line-height: 1; margin-top: 1px;">(14 avaliações)</span>
+          </div>
+          <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card border-0 shadow h-100">
+        <img src="Encanadores/encanador5.jpg" loading="lazy" class="card-img-top" alt="Foto Luciano">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Luciano Brito</h5>
+          <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
+          <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
+          <p class="text-muted mb-1"><strong>Experiência:</strong> 8 anos</p>
+          <p class="mb-2 text-muted d-flex align-items-center" style="font-weight: 500;">
+            Modalidade:
+            <span class="badge bg-success ms-2 d-flex align-items-center">
+              <i class="bi bi-person-fill me-1"></i> Presencial
+            </span>
+          </p>
+          <div class="mb-3 d-flex align-items-center" style="gap: 6px;">
+            <div class="d-flex text-warning align-items-center" style="line-height: 1;">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+            </div>
+            <span class="text-dark fw-semibold" style="line-height: 1;">3,5</span>
+            <span class="fw-medium text-dark" style="font-size: 0.85rem; line-height: 1; margin-top: 1px;">(10 avaliações)</span>
+          </div>
+          <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card border-0 shadow h-100">
+        <img src="Encanadores/encanador6.jpg" loading="lazy" class="card-img-top" alt="Foto Paulo">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Paulo Lima</h5>
+          <p class="text-muted mb-1"><strong>Serviço:</strong> Encanador</p>
+          <p class="text-muted mb-1"><strong>Cidade:</strong> Cascavel - PR</p>
+          <p class="text-muted mb-1"><strong>Experiência:</strong> 9 anos</p>
+          <p class="mb-2 text-muted d-flex align-items-center" style="font-weight: 500;">
+            Modalidade:
+            <span class="badge bg-success ms-2 d-flex align-items-center">
+              <i class="bi bi-person-fill me-1"></i> Presencial
+            </span>
+          </p>
+          <div class="mb-3 d-flex align-items-center" style="gap: 6px;">
+            <div class="d-flex text-warning align-items-center" style="line-height: 1;">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+            </div>
+            <span class="text-dark fw-semibold" style="line-height: 1;">4,5</span>
+            <span class="fw-medium text-dark" style="font-size: 0.85rem; line-height: 1; margin-top: 1px;">(19 avaliações)</span>
+          </div>
+          <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver perfil</a>
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
